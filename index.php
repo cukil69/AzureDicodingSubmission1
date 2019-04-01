@@ -114,7 +114,7 @@
                 $phone = $_POST['phone'];
                 $address = $_POST['address'];
                 $date = date("Y-m-d");
-                $sql_insert = "INSERT INTO User (name, email, job, phone, address, date) 
+                $sql_insert = "INSERT INTO [dbo].[User] (name, email, job, phone, address, date) 
                             VALUES (?,?,?,?,?,?)";
                 $stmt = $conn->prepare($sql_insert);
                 $stmt->bindValue(1, $name);
