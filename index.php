@@ -114,16 +114,16 @@
                 $phone = $_POST['phone'];
                 $address = $_POST['address'];
                 $date = date("Y-m-d");
-                $sql_insert = "INSERT INTO [dbo].[User] (name, email, job, phone, address, date) 
-                            VALUES (?,?,?,?,?,?)";
-                $stmt = $conn->prepare($sql_insert);
-                $stmt->bindValue(1, $name);
-                $stmt->bindValue(2, $email);
-                $stmt->bindValue(3, $job);
-                $stmt->bindValue(5, $phone);
-                $stmt->bindValue(6, $address);
-                $stmt->bindValue(7, $date);
-                $stmt->execute();
+                // $sql_insert = "INSERT INTO [dbo].[User] (name, email, job, phone, address, date) VALUES (?,?,?,?,?,?)";
+                // $stmt = $conn->prepare($sql_insert);
+                // $stmt->bindValue(1, $name);
+                // $stmt->bindValue(2, $email);
+                // $stmt->bindValue(3, $job);
+                // $stmt->bindValue(5, $phone);
+                // $stmt->bindValue(6, $address);
+                // $stmt->bindValue(7, $date);
+                // $stmt->execute();
+                $conn->exec("INSERT INTO [dbo].[User] (name, email, job, phone, address, date) VALUES ('$name','$email','$job','$phone','$address','$date')");
             } catch(Exception $e) {
                 echo "Failed: " . $e;
             }
