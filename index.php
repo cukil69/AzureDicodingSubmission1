@@ -14,7 +14,7 @@
  	th { font-size: 0.8em; text-align: left; border: none; padding-left: 0; }
  	td { padding: 0.2em; border: 0 none; }
     .table-container th { padding: 0.8em; border-bottom: 1px solid #ccc}
-    .table-container td { font-size: 1em; padding: 0.8em; border-bottom: 1px solid #ccc}
+    .table-container td { font-size: 0.8em; padding: 0.8em; border-bottom: 1px solid #ccc}
     span {font-size: 0.8em;}
     input[type="text"],
     input[type="email"],
@@ -63,7 +63,7 @@
     .form-container {
         width: 36%;
         margin-right: 35px;
-    }
+    }   
     .table-container{ 
         width: 58%;
         height: 100%;
@@ -127,8 +127,8 @@
                 if(count($registrants) > 0) {
                     echo "<h2>Registered user:</h2>";
                     echo "<table>";
-                    echo "<tr><th>Name</th>";
-                    echo "<th>Email</th>";
+                    echo "<tr><th width='100px'>Name</th>";
+                    echo "<th width='80px'>Email</th>";
                     echo "<th>Job</th>";
                     echo "<th>Phone</th>";
                     echo "<th>Address</th>";
