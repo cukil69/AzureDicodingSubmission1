@@ -104,7 +104,7 @@
             $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
             $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         } catch(Exception $e) {
-            // echo "Failed: " . $e;
+            echo "Failed: " . $e;
         }
         if (isset($_POST['submit'])) {
             try {
@@ -130,7 +130,7 @@
             echo "<h3>Your're registered!</h3>";
         } 
             try {
-                $sql_select = "SELECT * FROM User";
+                $sql_select = "SELECT * FROM [dbo].[User]";
                 $stmt = $conn->query($sql_select);
                 $registrants = $stmt->fetchAll(); 
                 if(count($registrants) > 0) {
