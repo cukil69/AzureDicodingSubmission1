@@ -62,10 +62,10 @@
     }
     .form-container {
         width: 36%;
-        margin-right: 35px;
+        margin-right: 30px;
     }   
     .table-container{ 
-        width: 58%;
+        width: 60%;
         height: 100%;
         overflow-x: scroll;
         overflow-y: scroll;
@@ -127,8 +127,8 @@
                 if(count($registrants) > 0) {
                     echo "<h2>Registered user:</h2>";
                     echo "<table>";
-                    echo "<tr><th width='100px'>Name</th>";
-                    echo "<th width='80px'>Email</th>";
+                    echo "<tr><th>Name</th>";
+                    echo "<th>Email</th>";
                     echo "<th>Job</th>";
                     echo "<th>Phone</th>";
                     echo "<th>Address</th>";
